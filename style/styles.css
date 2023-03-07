@@ -1,0 +1,364 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+
+}
+
+#volverarriba {
+    position: fixed;
+    bottom: 20px;
+    left: 30px;
+    width: 5%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#volverarriba.show {
+    opacity: 1;
+}
+
+.header {
+	background-color: rgba(255, 255, 255, 1);
+	text-align: center;
+    align-self: center;
+    color: rgba(64, 63, 76, 1);
+    grid-column: 3;
+}
+
+
+.image-container {
+    margin-top: 15em;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    width: 262px;
+    height: 262px;
+    transform: translate(-50%, -50%);
+  }
+  
+  .image-container img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+  .image-container img:last-child {
+    opacity: 0;
+  }
+  
+  .image-container:hover img:first-child {
+    opacity: 0;
+  }
+  
+  .image-container:hover img:last-child {
+    opacity: 1;
+  }
+
+.header > h1{
+    margin-top: 0em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 96px;
+}
+
+.header > h2{
+    margin-top: -1em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+}
+
+nav {
+    margin-top: -20em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+li {
+    margin: 10px;
+  }
+  
+a {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 46px;
+    color: #403F4C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: rgb(219, 219, 219);
+    border-color: rgba(64, 63, 76, 1);;
+}
+
+.contenedor {
+    width: auto;
+    grid-column: 1 / 5;
+    align-items: center;
+    margin-bottom: 5em;
+}
+
+#ilustracion {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+#carteleria {
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+
+#editorial {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+#packaging {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.galeria-ilustracion {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 541px;
+    width: 789px;
+    grid-column: 2;
+}
+  
+.galeria-ilustracion img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.galeria-ilustracion img.active {
+    opacity: 1;
+}
+  
+.imagen-ilustracion {
+    margin-right: 2em;
+    margin-left: 1em;
+}
+
+
+.galeria-carteleria {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 789px;
+    width: 541px;
+    grid-column: 1;
+    margin-left: auto;
+}
+  
+.galeria-carteleria img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.galeria-carteleria img.active {
+    opacity: 1;
+}
+
+.galeria-editorial {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    height: 626px;
+    width: 635px;
+}
+  
+.galeria-editorial img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.galeria-editorial img.active {
+    opacity: 1;
+}
+
+.imagen-editorial {
+    max-width: 70%;
+    min-width: 600px;
+    margin-left: 1em;
+}
+
+.galeria-packaging {
+    position: relative;
+    overflow: hidden;
+    grid-column: 1;
+    margin-left: auto;
+    margin-right: 0;
+    height: 652px;
+    width: 749px;
+}
+  
+.galeria-packaging img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+  
+.galeria-packaging img.active {
+    opacity: 1;
+}
+
+.imagen-packaging {
+    min-width: auto;
+    min-height: 600px;
+}
+
+.ilustracion-texto {
+    text-align: right;
+    margin-left: 30%;
+    grid-column: 1;
+}
+
+.editorial-texto {
+    text-align: right;
+    margin-left: 25%;
+}
+
+.carteleria-texto {
+    text-align: left;
+    grid-column: 2;
+    margin-top: auto;
+    margin-left: 1em;
+    
+}
+
+.packaging-texto {
+    text-align: left;
+    grid-column: 2;
+    margin-left: 1em;
+}
+
+
+
+.titulo {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: #403F4C;
+}
+
+.subtitulo {
+    font-family: 'Ubuntu';
+    font-style: italic;
+    font-weight: 300;
+    font-size: 24px;
+    color: #403F4C;
+}
+
+.texto {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    color: #403F4C;
+}
+
+#aboutme{
+    text-align: justify;
+    max-width: 2200px;
+    margin-right: auto;
+    margin-left: auto;
+    grid-column: 2/5;
+}
+
+.aboutme-titulo {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    color: #403F4C;
+    text-transform: uppercase;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+.aboutme-texto {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 36px;
+    color: #403F4C;
+    margin: 2em;
+}
+
+.contact {
+    margin-top: 10em;
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 91.02%;
+    text-align: right;
+    letter-spacing: 0.435em;
+    color: #403F4C;
+}
+
+@media screen and (max-width: 1268px) {
+    .container {
+      grid-template-columns: 30% 70%;
+    }
+}
